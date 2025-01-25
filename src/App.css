@@ -1,0 +1,25 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* 헤더, 푸터 고정 높이가 필요하다면 적절히 높이나 기타 스타일을 지정 */
+header,
+footer {
+  text-align: center;
+}
+
+/* 메인 레이아웃: 사이드바와 컨텐츠를 가로로 배치 */
+.main {
+  display: flex;
+  flex: 1; /* 남은 영역을 main이 차지하도록 */
+}
+
+.content {
+  flex: 1; /* 사이드바를 제외한 나머지 영역 전부 사용 */
+  padding: 20px;
+  background-color: #fff;
+}

@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    // 빌드 타겟 자바스크립트 버전
+    "target": "ESNext",
+
+    // 사용할 라이브러리(환경) 목록
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+
+    // CommonJS 대신 ESNext 모듈 사용을 권장 (CRA에서 ESNext 권장)
+    "module": "ESNext",
+
+    // Node 방식 모듈 해석
+    "moduleResolution": "node",
+
+    // JSX 변환 모드 (CRA 5 이상은 "react-jsx" 권장)
+    "jsx": "react-jsx",
+
+    // JS 파일 포함 여부 (JS도 프로젝트에 포함시켜 TS 검사 가능)
+    "allowJs": true,
+
+    // 타입 정의(.d.ts) 파일 체크를 건너뜀(성능 향상, 자주 쓰는 옵션)
+    "skipLibCheck": true,
+
+    // 엄격 모드 (타입 체크 엄격)
+    "strict": true,
+
+    // import/export 시 대소문자 불일치 에러
+    "forceConsistentCasingInFileNames": true,
+
+    // TypeScript 단독으로 출력(Emit)하지 않음 (CRA는 Babel이 빌드 담당)
+    "noEmit": true,
+
+    // CommonJS 모듈을 기본 내보내기처럼 쓸 수 있게 함
+    "esModuleInterop": true,
+
+    // json import 허용
+    "resolveJsonModule": true,
+
+    // 파일 단위로 독립적인 모듈로 처리
+    "isolatedModules": true
+  },
+  // 소스 포함 범위
+  "include": ["src"],
+  "types": ["jest", "node"]
+}

@@ -153,7 +153,8 @@ const AuctionItem: React.FC = () => {
     <div style={{ padding: "20px", maxWidth: "800px", margin: "0 auto" }}>
       <h1>{auction.title}</h1>
       <img
-        src={`http://localhost:8080/api/auction/image/${auction.image}`}
+        // src={`http://www.pinjun.xyz:8000/api/auction/image/${auction.image}`}
+        src={`http://localhost:8000/api/auction/image/${auction.image}`}
         alt={auction.title}
         style={{ maxWidth: "100%", borderRadius: "10px" }}
       />

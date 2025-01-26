@@ -1,6 +1,6 @@
 // global/services/stompClient.ts
 import { Client, IMessage } from "@stomp/stompjs";
-import SockJS from 'sockjs-client';
+import SockJS from "sockjs-client";
 
 let stompClient: Client | null = null;
 
@@ -12,8 +12,9 @@ let stompClient: Client | null = null;
 export function connectStomp(): Promise<void> {
   return new Promise((resolve, reject) => {
     // SockJS 엔드포인트 (스프링 WebSocketConfig에서 .addEndpoint("/ws-stomp")에 맞춤)
-    const sock = new SockJS("http://localhost:8080/ws-stomp");
-
+    // const sock = new SockJS("http://localhost:8000/ws-stomp");
+    // const sock = new SockJS("http://pinjun.xyz:8000/ws-stomp");
+    const sock = new SockJS("/ws-stomp");
     stompClient = new Client({
       // 실제 웹소켓을 SockJS가 대체
       webSocketFactory: () => sock as any,

@@ -45,7 +45,8 @@ const AuctionList: React.FC<AuctionListProps> = ({ filter, searchQuery }) => {
               {auction.status} / {auction.price}원 / {auction.endTime}
               <br />
               <img
-                src={`http://localhost:8080/api/auction/image/${auction.image}`}
+                // src={`http://www.pinjun.xyz:8000/api/auction/image/${auction.image}`}
+                src={`http://localhost:8000/api/auction/image/${auction.image}`}
                 alt={auction.title}
                 style={{ width: "80px", height: "80px" }}
               />

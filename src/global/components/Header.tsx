@@ -34,7 +34,7 @@ const Header: React.FC<HeaderProps> = ({ setSearchQuery }) => {
   // 컴포넌트 마운트 시 사용자 이메일 목록 불러오기
   useEffect(() => {
     api
-      .get("/api/users")
+      .get("/users")
       .then((res) => {
         // 구조가 { userList: [ {email:...}, {...} ] }
         setUsers(res.data.userList || []);
@@ -45,7 +45,7 @@ const Header: React.FC<HeaderProps> = ({ setSearchQuery }) => {
   // emailLogin
   const handleEmailLogin = (email: string) => {
     api
-      .post("/api/auth/emailLogin", { email })
+      .post("/auth/emailLogin", { email })
       .then((res) => {
         console.log("이메일 로그인 성공:", res.data);
         alert(`이메일(${email})로 로그인 완료!`);
@@ -120,7 +120,7 @@ const Header: React.FC<HeaderProps> = ({ setSearchQuery }) => {
 
       // 결제 성공 시 서버에 결제정보 전송
       try {
-        const res = await fetch("/api/payment/complete", {
+        const res = await fetch("/payment/complete", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({

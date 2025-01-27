@@ -9,8 +9,7 @@ import axios from "axios";
 // export default api;
 
 const api = axios.create({
-  // baseURL에 절대 주소 대신 "/api" 같은 상대 경로
-  baseURL: "/api",
+  baseURL: "https://www.pinjun.xyz/api",
   withCredentials: true,
 });
 

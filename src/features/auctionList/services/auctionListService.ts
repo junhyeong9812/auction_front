@@ -20,11 +20,8 @@ export async function fetchAuctionList(
   if (status) params.status = status;
   if (keyword) params.keyword = keyword;
 
-  const res = await api.get<PageResponse<AuctionListItem>>(
-    "/api/auctions/search",
-    {
-      params,
-    }
-  );
+  const res = await api.get<PageResponse<AuctionListItem>>("/auctions/search", {
+    params,
+  });
   return res.data;
 }

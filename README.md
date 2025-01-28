@@ -32,7 +32,10 @@
 - WebSocket(STOMP)을 통해 현재 진행 중인 경매 입찰 정보를 실시간으로 반영
 
 ### 프로젝트 아키텍쳐
-![image](https://github.com/user-attachments/assets/4acc0434-3504-4a94-8800-6f489c5e27a8)
+![image](https://github.com/user-attachments/assets/7bd04d40-40a0-4208-8bf0-183feafa33a7)
+
+
+
 
 
 ---
